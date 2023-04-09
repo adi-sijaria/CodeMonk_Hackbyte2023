@@ -1,0 +1,35 @@
+/* .home-container{
+    display: flex;
+    flex-direction: column;
+    
+} */
+.whole-home-container{
+    position: relative;
+    left:310px;
+   
+}
+.post{
+    width: 900px;
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 2px 2px rgb(136, 132, 132);
+    min-height: 900px;
+
+}
+.filter{
+   
+}
+.full{
+    display: flex;
+    
+    
+    
+
+  }
+  .search-box1{
+    border-radius: 4px;
+    height: 30px;
+    margin-left: 20px;
+    
+
+
+  }

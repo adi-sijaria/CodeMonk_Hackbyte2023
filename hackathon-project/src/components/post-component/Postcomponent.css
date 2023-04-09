@@ -1,0 +1,27 @@
+ .post-main-container{
+    background-color: aliceblue;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+
+
+ }
+ .category{
+    float: right;
+    position: relative;
+    top:-70px;
+
+ }
+ .post-heading{
+    height: 60px;
+
+ }
+ .quote-heading{
+    display: flex;
+    flex-wrap: wrap;
+    
+ }

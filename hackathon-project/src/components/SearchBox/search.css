@@ -1,0 +1,41 @@
+.search-box{
+    width: 800px;
+    height: 25px;
+    padding: 10px;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 20px;
+
+  
+    
+
+}
+.addnote-button{
+    position: relative;
+    top:8px;
+    margin-left: 5px;
+}
+.search-box-container{
+    position: relative;
+    
+    
+    top:10px;
+    
+    
+    
+
+}
+@media screen and (max-width: 493px) {
+   .search-box-container{
+    position: relative;
+    /* align-items: center; */
+    left:70px;
+    
+    
+   }
+   .search-box{
+    width: 200px;
+    font-size: 16px;
+   }
+}
