@@ -21,6 +21,8 @@ urlpatterns = [
         url(r'^login$',views.LoginView.as_view(),name='loginview'),
         url(r'^getallprofile$',views.GetProfile.as_view(),name='allprofile'),
     url(r'^userview$',views.UserView.as_view(),name="user"),
-    url(r'^logout$',views.LogoutView.as_view(),name="LOGOUT")
- 
+    url(r'^logout$',views.LogoutView.as_view(),name="LOGOUT"),
+    url(r'^kickposting$',views.Kickposting.as_view(),name="kickposting"),
+     url(r'^fetchkicks$',views.Fetchkicks.as_view(),name="kickposting"),
+     path('fetchuserhistory/<str:pk>/',views.Fetchuserhistory.as_view(),name='delete student')
 ]

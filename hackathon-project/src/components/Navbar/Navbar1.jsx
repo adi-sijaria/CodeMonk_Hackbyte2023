@@ -8,6 +8,8 @@ import {SiGooglemessages} from "react-icons/si"
 import {CgProfile} from "react-icons/cg"
 import {AiOutlineMore} from "react-icons/ai"
 
+import {FaHistory} from "react-icons/fa"
+
 
 const Navbar1 = () => {
   return (
@@ -28,9 +30,12 @@ const Navbar1 = () => {
       </Link>
     </li>
     <li class="nav-item">
+      <Link to="/history">
+
       <a class="nav-link" href="#">
-      <BsBellFill size={30}/>
+      <FaHistory size={30}/>
       </a>
+      </Link>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#"><SiGooglemessages  size={30}/></a>

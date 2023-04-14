@@ -112,6 +112,9 @@ export default function SignUpForm() {
         name='about' 
         value={about} />
 
+<input type="file" id="fileUpload" accept=".png" />
+
+
         <Button buttonType="submit">Sign Up</Button>
 
       </form>

@@ -1,9 +1,9 @@
 .user-card{
-    background-color: rgb(233, 240, 247);
+    background-color: rgb(255, 255, 255);
     width: 300px;
-    margin-left: 20px;
-    box-shadow: 1px 1px 1px 1px beige;
-    border-radius: 8px;
+    margin-left: 10px;
+    box-shadow: 1px 1px 1px 1px rgb(155, 149, 149);
+   
 }
 .user-card:hover{
     box-shadow: 1px 1px 1px 1px rgb(129, 124, 124);

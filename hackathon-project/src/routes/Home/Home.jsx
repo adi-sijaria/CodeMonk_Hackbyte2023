@@ -7,22 +7,38 @@ import ChatComponent from '../../components/Chatcomponent/Chatcomponent'
 import Postcomponent from '../../components/post-component/Postcomponent'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { useContext } from 'react'
 import UserCard from '../../components/userprofilecard.component/UserCard'
-const Home = () => {
-  const [Profiles, Setprofiledata] = useState([])
+import { UserContext } from '../../context/authcontext/Auth.context'
+ const defaultauth={
+  id:null,
+  name:'',
+  email:'',
+  about:''
 
+
+
+
+}
+const Home = () => {
+  const{currentUser,setCurrentUser}=useContext(UserContext);
+  
+  const [Profiles, Setprofiledata] = useState([])
+  // const [Auth, Setauth] = useState(defaultauth)
+  console.log(currentUser,"authuser")
 
 
   useEffect(() => {
-  //   setInterval(() => {
-  //     const response = axios({
-  //       url: "http://localhost:8000/api/getallprofile",
-  //       method: "GET"
-  //     }).then((res) => {
-  //       console.log(res.data)
-  //       Setprofiledata(res.data)
-  //     })
-  // }, 15000);
+    setInterval(() => {
+      const response = axios({
+        url: "http://localhost:8000/api/getallprofile",
+        method: "GET"
+      }).then((res) => {
+        console.log(res.data)
+        Setprofiledata(res.data)
+       
+      })
+  }, 15000);
   
     const response = axios({
       url: "http://localhost:8000/api/userview",
@@ -30,7 +46,7 @@ const Home = () => {
       withCredentials: true
     }).then((res) => {
       console.log(res.data,)
-     
+      setCurrentUser(res.data)
     })
 
  
@@ -44,6 +60,7 @@ const Home = () => {
   return (
     <div className='whole-home-container'>
       <h1>Home</h1>
+      <h1> Welcome {currentUser.name}</h1>
       <hr />
       <div className='home-container full'>
         <div className='post'>

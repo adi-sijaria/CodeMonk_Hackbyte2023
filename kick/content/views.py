@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
-from .serializers import UserSerializer,profileSerializer
+from .serializers import UserSerializer,profileSerializer,quoteSerializer,quoteshowSerializer
 from rest_framework.response import Response
-from .models import User
+from .models import User,quotes
 from rest_framework.exceptions import AuthenticationFailed
 import jwt,datetime
 from rest_framework.permissions import IsAuthenticated
@@ -69,4 +69,28 @@ class GetProfile(APIView):
         items=User.objects.all()
         serializer=profileSerializer(items,many=True)
         return Response(serializer.data)
+class Kickposting(APIView):
+    def post(self,request):
         
+        serializer= quoteSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
+class Fetchkicks(APIView):
+    # permission_classes = [IsAuthenticated]
+    
+    def get(self, request):
+        items=quotes.objects.all()
+       
+        serializer=quoteshowSerializer(items,many=True)
+        print(serializer,"hi")
+        return Response(serializer.data)
+class Fetchuserhistory(APIView):
+    # permission_classes = [IsAuthenticated]
+    
+    def get(self, request,pk):
+        items=quotes.objects.filter(userid=pk)
+       
+        serializer=quoteshowSerializer(items,many=True)
+        print(serializer,"hi")
+        return Response(serializer.data)

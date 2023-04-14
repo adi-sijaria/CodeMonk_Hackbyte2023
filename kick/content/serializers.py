@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User
+from .models import User,quotes
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
@@ -19,5 +19,14 @@ class profileSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
         fields=['id','name','about']
-        
-    
+class quoteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=quotes
+        fields=['userid','quote','category']
+class quoteshowSerializer(serializers.ModelSerializer):
+    user=UserSerializer(source="userid",read_only=True,many=False)
+  
+    class Meta:
+        model=quotes
+        fields=['userid','quote','category','user']
+
