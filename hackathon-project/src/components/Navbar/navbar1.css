@@ -10,6 +10,7 @@
     margin-right: 10px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     position: fixed;
+    margin-top: 0;
   }
   
   .navbar-nav {
@@ -20,7 +21,7 @@
     margin: 0;
     padding: 0;
     position: relative;
-    top:150px
+    top:100px
   }
   .nav-item:hover{
     background-color: aqua;
@@ -50,6 +51,7 @@
     
 
   }
+  
 
   
   

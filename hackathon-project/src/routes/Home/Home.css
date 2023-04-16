@@ -32,6 +32,9 @@
     
 
   }
+  body{
+    background: linear-gradient(to right, #0066cc 0%, #00ffff 98%);
+  }
   .search-box1{
     border-radius: 4px;
     height: 30px;

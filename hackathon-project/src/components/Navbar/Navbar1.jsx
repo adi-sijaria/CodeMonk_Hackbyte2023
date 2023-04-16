@@ -14,10 +14,11 @@ import {FaHistory} from "react-icons/fa"
 const Navbar1 = () => {
   return (
     <>
-    <div className='full'>
+    {/* <div className='full'> */}
   
     <div >
         <nav class="navbar">
+          <h1 style={{color:'white', fontSize:'40px'}}>KICK</h1>
   <ul class="navbar-nav">
     <li class="nav-item">
         <Link to='/home'>
@@ -53,7 +54,7 @@ const Navbar1 = () => {
       
     </div>
     <Outlet/>
-    </div>
+    {/* </div> */}
     </>
    
     
