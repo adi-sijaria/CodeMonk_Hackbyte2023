@@ -10,6 +10,7 @@ import { useContext } from 'react';
 import axios from 'axios';
 
 import './signup.scss'
+import { Link } from 'react-router-dom';
 // import axios from 'axios';
 const defaultFormFields = {
   displayName: '',
@@ -63,62 +64,38 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className='sign-up-container'>
-      <h2>Dont have an account</h2>
-      <span>Sign up with your email and password</span>
-      <form onSubmit={handleSubmit}>
-      
-      
-        <Forminput
-          label="Display Name"
-          type="text"
-          required
-          onChange={handleChange}
-          name='displayName'
-          value={displayName} />
+    <div className="container pos">
+		<div className="signup-box">
+			<h1>Sign Up</h1>
+			<form onSubmit={handleSubmit}>
+				<div className="textbox">
+					<i className="fa fa-user" aria-hidden="true"></i>
+					<input type="text" placeholder="Username" name="displayName" value={displayName}  onChange={handleChange} required/>
+				</div>
 
-       
-       
-        <Forminput 
-        label="email"
-        type="email" 
-        required 
-        onChange={handleChange} 
-        name='email' value={email} />
+				<div className="textbox">
+					<i className="fa fa-envelope" aria-hidden="true"></i>
+					<input type="email" placeholder="Email Address" name="email" value={email} onChange={handleChange} required/>
+				</div>
 
-       
-       
-        <Forminput 
-        label="password"
-        type="password" 
-        required 
-        onChange={handleChange} 
-        name='password' 
-        value={password} />
+				<div className="textbox">
+					<i className="fa fa-lock" aria-hidden="true"></i>
+					<input type="password" placeholder="Password" name="password" value={password} onChange={handleChange} required/>
+				</div>
+        <div className="textbox">
+					<i className="fa fa-lock" aria-hidden="true"></i>
+					<input type="password" placeholder="confirmPassword"name='confirmPassword' value={confirmPassword} onChange={handleChange}  required/>
+				</div>
+        <div className="textbox">
+					<i className="fa fa-lock" aria-hidden="true"></i>
+					<input type="text" placeholder="About" name="about" value={about} onChange={handleChange} required/>
+				</div>
 
-       
-       
-        <Forminput 
-        label="confirm-password"
-        type='password' 
-        required onChange={handleChange} 
-        name='confirmPassword' 
-        value={confirmPassword} />
-
-     <Forminput 
-        label="About yourself"
-        type='text' 
-        required onChange={handleChange} 
-        name='about' 
-        value={about} />
-
-<input type="file" id="fileUpload" accept=".png" />
-
-
-        <Button buttonType="submit">Sign Up</Button>
-
-      </form>
-    </div>
+				<input type="submit" className="btn" value="Sign Up" />
+			</form>
+			<p className="login-link">Already have an account? <Link to="/">Login</Link></p>
+		</div>
+	</div>
 
   )
 }

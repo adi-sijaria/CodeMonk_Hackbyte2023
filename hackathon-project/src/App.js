@@ -7,6 +7,8 @@ import Signin from './routes/Authentication/Signin/Signin';
 import SignUpForm from './routes/sign-up/signup.component';
 import Content from './components/Content/Content';
 import History from './routes/History/History';
+import Profilepage from './routes/Profilepage/Profilepage';
+import Editprofile from './routes/editprofile/Editprofile';
 const App = () => {
   return (
     <div>
@@ -19,6 +21,8 @@ const App = () => {
             <Route path='signup' element={<SignUpForm/>} />
             <Route path='/' element={<Signin/>} />
             <Route path='/history' element={<History/>} />
+            <Route path='/profile' element={<Profilepage/>} />
+            <Route path='/editpage' element={<Editprofile/>} />
 
 
       

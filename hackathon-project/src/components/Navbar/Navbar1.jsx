@@ -21,30 +21,32 @@ const Navbar1 = () => {
   <ul class="navbar-nav">
     <li class="nav-item">
         <Link to='/home'>
-      <a class="nav-link" href="#"><BiHome size={30}/></a>
+      <a class="nav-link" href="#"><BiHome size={40}/></a>
       </Link>
     </li>
     <li class="nav-item">
         <Link to="/">
-      <a class="nav-link" href="#"><HiOutlineUserCircle size={30}/></a>
+      <a class="nav-link" href="#"><HiOutlineUserCircle size={40}/></a>
       </Link>
     </li>
     <li class="nav-item">
       <Link to="/history">
 
       <a class="nav-link" href="#">
-      <FaHistory size={30}/>
+      <FaHistory size={40}/>
       </a>
       </Link>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#"><SiGooglemessages  size={30}/></a>
+      <a class="nav-link" href="#"><SiGooglemessages  size={40}/></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#"><CgProfile size={30}/></a>
+      <Link to="/profile">
+      <a class="nav-link" href="#"><CgProfile size={40}/></a>
+      </Link>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#"><AiOutlineMore size={30}/></a>
+      <a class="nav-link" href="#"><AiOutlineMore size={40}/></a>
     </li>
   </ul>
 </nav>

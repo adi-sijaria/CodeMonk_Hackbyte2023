@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^logout$',views.LogoutView.as_view(),name="LOGOUT"),
     url(r'^kickposting$',views.Kickposting.as_view(),name="kickposting"),
      url(r'^fetchkicks$',views.Fetchkicks.as_view(),name="kickposting"),
-     path('fetchuserhistory/<str:pk>/',views.Fetchuserhistory.as_view(),name='delete student')
+     path('fetchuserhistory/<str:pk>/',views.Fetchuserhistory.as_view(),name='delete student'),
+      path('userupdate/<str:pk>/',views.UserUpdate.as_view(),name='Userupdate')
 ]

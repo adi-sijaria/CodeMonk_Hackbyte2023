@@ -54,29 +54,31 @@ const Postcomponent = () => {
 
     return (
         <div className='post-container'>
-            {posts.map((post) => {
-
-                
-                return (
-                    <>
-                        <div className='post-main-container'>
-                            <div className='post-heading'>
-
-                                <h3><FaUserCircle color='grey' />{post.user.name}</h3>
-                                <h5 className='category'>{post.category}</h5>
+            {posts.map((post) => (
+                <>
+                    <div class="tweet-container">
+                        <div class="tweet-header">
+                            <img src="https://placehold.it/50x50" alt="Profile Picture"/>
+                                <div class="user-info">
+                                    <h4>{post.user.name}</h4>
+                                    <p> #{post.category} </p>
+                                </div>
+                                <div class="post-time">
+                                    <p>2 hours ago</p>
+                                </div>
                             </div>
-                            
-
-
-                            <div className='quote-component'>
-
-                                <h4>{post.quote}</h4>
-                            </div>
-
+                        <div class="tweet-body">
+                            <p>{post.quote}</p>
                         </div>
-                    </>
-                )
-            })}
+                        <div class="tweet-footer">
+                            <button class="reply-button"><i class="fa fa-reply"></i> Reply</button>
+                            <button class="retweet-button"><i class="fa fa-retweet"></i> Rekick</button>
+                            <button class="like-button"><i class="fa fa-heart"></i> Like</button>
+                            <button class="share-button"><i class="fa fa-share"></i> Share</button>
+                        </div>
+                    </div>
+                </>
+            ))}
 
 
         </div>

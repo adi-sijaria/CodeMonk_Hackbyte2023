@@ -45,7 +45,7 @@ const Home = () => {
       method: "GET",
       withCredentials: true
     }).then((res) => {
-      console.log(res.data,)
+      console.log(res.data,"baend se data")
       setCurrentUser(res.data)
     })
 
@@ -59,8 +59,8 @@ const Home = () => {
 
   return (
     <div className='whole-home-container'>
-      <h1>Home</h1>
-      <h1> Welcome {currentUser.name}</h1>
+      <h4 style={{color:"white" ,textShadow: "1px 1px 1px 1px black"}}>Home</h4>
+      <h3 style={{color:"white"}}> Welcome {currentUser.name}</h3>
       <hr />
       <div className='home-container full'>
         <div className='post'>

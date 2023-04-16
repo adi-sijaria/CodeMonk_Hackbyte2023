@@ -94,3 +94,11 @@ class Fetchuserhistory(APIView):
         serializer=quoteshowSerializer(items,many=True)
         print(serializer,"hi")
         return Response(serializer.data)
+class UserUpdate(APIView):
+    def put(self,request,pk):
+        user=User.objects.get(id=pk)
+        serializer=profileSerializer(instance=user,data=request.data)
+        print(serializer)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)

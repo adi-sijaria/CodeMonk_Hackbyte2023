@@ -30,7 +30,7 @@ const History = () => {
     },[])
   return (
     <div className='history-component'>
-      <h1>Hi {currentUser.name} , here is your kick history</h1>
+      <h1 style={{color:"white"}}>Hi {currentUser.name} , here is your kick history</h1>
         {history.map((kick)=>{
             return(
                 <>

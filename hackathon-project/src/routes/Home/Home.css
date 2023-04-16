@@ -11,15 +11,22 @@
 .post{
     width: 900px;
     /* border: 2px solid black; */
-    box-shadow: 2px 2px 2px 2px rgb(136, 132, 132);
+    box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
     min-height: 900px;
+    /* background: linear-gradient(to left, #ffffff 0%, #ccffff 100%); */
 
 }
 .filter{
+    display: flex;
+    background-color: rgb(243, 244, 246);
+    width: 293px;
+    margin-left: 10px;
    
 }
 .full{
     display: flex;
+    background-color: rgb(66, 181, 210);
+    background: linear-gradient(to right, #0066cc 0%, #00ffff 98%);
     
     
     

@@ -30,3 +30,4 @@ class quoteshowSerializer(serializers.ModelSerializer):
         model=quotes
         fields=['userid','quote','category','user']
 
+
